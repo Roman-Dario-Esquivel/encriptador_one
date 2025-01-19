@@ -1,14 +1,95 @@
+/* Configuración de variables de color */
 :root {
     --color-primario: #0bf9f9;
     --color-SecOpac: rgba(11, 249, 249, 0.1);
-    /* Fondo con opacidad */
     --color-background: #011230;
     --color-text: #0bf9f9;
 }
 
-/* Configuración básica */
-html,
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Diseño básico para el body */
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.logo-text {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Estilos para el main */
+main {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+/* Sección con texto */
+.section {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Estilos para las columnas */
+.row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.column {
+    flex: 1 1 100%; /* Las columnas ocuparán el 100% en pantallas pequeñas */
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+}
+
+/* Estilos de textarea */
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+/* Configuración básica */
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,7 +113,7 @@ header {
 }
 
 /* Contenedor para logo y texto */
-.container {
+.logo-container {
     margin-left: 2%;
     display: flex;
     align-items: center;
@@ -47,23 +128,18 @@ header {
     width: 60px;
     height: 60px;
     background-color: transparent;
-    /* Fondo transparente */
     font-size: 2.5rem;
     color: var(--color-primario);
     text-decoration: none;
     border-radius: 50%;
-    /* Hace el logo circular */
     border: 2px solid var(--color-primario);
-    /* Borde con el color primario */
     text-align: center;
     box-shadow: 0px 0px 10px var(--color-primario);
     transition: all 0.3s ease;
 }
 
-/* Hover sobre el logo */
 .logo a:hover {
     background-color: var(--color-SecOpac);
-    /* Fondo con opacidad */
     color: var(--color-background);
     box-shadow: 0px 0px 25px var(--color-primario);
 }
@@ -71,43 +147,8 @@ header {
 /* Texto del logo */
 .logo-text {
     margin-left: 1rem;
-    /* Espacio entre el logo y el texto */
     font-size: 1.2rem;
     color: var(--color-text);
-}
-
-/* Animación del logo */
-@keyframes logo {
-    0% {
-        color: var(--color-primario);
-        text-shadow: 0px 0px 12px var(--color-primario),
-            0px 0px 8px var(--color-primario),
-            0px 0px 5px var(--color-primario);
-        box-shadow: 0px 0px 25px var(--color-primario),
-            0px 0px 15px var(--color-primario),
-            0px 0px 10px var(--color-primario),
-            inset 0px 0px 10px var(--color-primario),
-            inset 0px 0px 8px var(--color-primario);
-    }
-
-    50% {
-        color: #5f5;
-        text-shadow: none;
-        box-shadow: none;
-        border: 3px solid #5f5;
-    }
-
-    100% {
-        color: var(--color-primario);
-        text-shadow: 0px 0px 12px var(--color-primario),
-            0px 0px 8px var(--color-primario),
-            0px 0px 5px var(--color-primario);
-        box-shadow: 0px 0px 25px var(--color-primario),
-            0px 0px 15px var(--color-primario),
-            0px 0px 10px var(--color-primario),
-            inset 0px 0px 10px var(--color-primario),
-            inset 0px 0px 8px var(--color-primario);
-    }
 }
 
 /* Main */
@@ -116,16 +157,15 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    /* Asegura que main ocupe todo el espacio disponible */
     margin-left: 15px;
-    /* Margen izquierdo */
     margin-right: 15px;
-    /* Margen derecho */
-    
+    height: 100%;
 }
-.my-custom-row{
-    display: flex;
+
+.my-custom-row {
     flex-grow: 1;
+    display: block;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -135,27 +175,13 @@ main {
     flex-direction: column;
     flex-grow: 1;
     height: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .logo a {
-        font-size: 2rem;
-        width: 50px;
-        height: 50px;
-    }
-
-    .logo-text {
-        font-size: 1rem;
-    }
-}
-
-/* Clase para agregar márgenes laterales */
 .margen-laterales {
     margin-left: 15px;
-    /* Margen izquierdo */
     margin-right: 15px;
-    /* Margen derecho */
 }
 
 * {
@@ -165,80 +191,77 @@ main {
 .col-md-6 {
     flex-grow: 1;
     margin: 0 10px;
-    /* Margen a los lados */
     width: calc(50% - 20px);
 }
 
-.col-borde1 {
+.col-borde1, .col-borde2 {
     border: 2px solid var(--color-primario);
-    /* Borde con color primario */
     border-radius: 8px;
-    /* Bordes redondeados opcionales */
     background-color: transparent;
-    /* Fondo transparente */
     padding: 1rem;
-    /* Espaciado interno */
     transition: all 0.3s ease;
-    /* Transición para cambios suaves */
-}
-.col-borde2 {
-    border: 2px solid var(--color-primario);
-    /* Borde con color primario */
-    border-radius: 8px;
-    /* Bordes redondeados opcionales */
-    background-color: transparent;
-    /* Fondo transparente */
-    padding: 1rem;
-    /* Espaciado interno */
-    transition: all 0.3s ease;
-    /* Transición para cambios suaves */
 }
 
 .col-borde1:hover {
     background-color: var(--color-SecOpac);
-    /* Fondo con opacidad al pasar el ratón */
 }
 
 footer {
     background-color: var(--color-SecOpac);
-    /* Mismo fondo que el header */
     color: var(--color-text);
-    /* Color de texto */
     text-align: center;
-    /* Centrar texto */
     padding: 1rem;
-    /* Espaciado alrededor */
     margin-top: auto;
-    /* Empuja el pie de página hacia abajo */
 }
 
+/* Estilo de textarea personalizado */
 .custom-textarea {
+    flex-grow: 1;
     background-color: transparent;
-    color: var(--color-text);
-    /*border: 2px solid var(--color-primario);
-    padding: 10px;
-    border-radius: 8px;*/
     width: 100%;
     border: none;
-    /* Sin borde */
     outline: none;
-    /* Elimina el contorno al enfocar */
 }
 
+/* Margen y relleno para las filas */
+.margen-laterales {
+    margin-left: 15px;
+    margin-right: 15px;
+}
 
+.padding-columnas {
+    padding: 15px;
+}
+
+/* Imagen de fondo para la segunda columna */
 .background_image {
-    flex-grow: 1;
-    /* Asegura que el contenido interno se centre */
-    height: 100%;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
-    background-image: url('/home/roman/Documentos/encriptador_one/romanencriptdor/images/fondo.jpeg');
-    /* Ruta de la imagen */
-    background-size: contain;
-    /* Asegura que toda la imagen sea visible */
+    background-image: url('/home/roman/Documentos/encriptador_one/romanencriptdor/images/fondo.jpeg'); /* Aquí puedes poner la URL de tu imagen */
+    background-size: cover;
     background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* No repite la imagen */
+    height: 100%; /* Asegura que la columna ocupe toda la altura disponible */
 }
+
+/* Estilos responsivos para pantallas grandes */
+@media (min-width: 768px) {
+    .row {
+        flex-direction: row; /* Las columnas se colocarán una al lado de la otra en pantallas grandes */
+    }
+
+    .column {
+        flex: 1 1 48%; /* Las columnas ocuparán el 50% del ancho en pantallas grandes */
+    }
+}
+
+
+
+/* Estilos para pantallas de tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .row {
+      flex-direction: column; /* Las columnas se colocarán una debajo de la otra */
+    }
+    .column {
+      flex: 1 1 auto; /* Las columnas ocuparán el espacio disponible */
+      height: auto; /* La altura de las columnas se ajustará automáticamente*/
+    }
+  }
+
