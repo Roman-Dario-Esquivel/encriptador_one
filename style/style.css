@@ -241,27 +241,43 @@ footer {
     height: 100%; /* Asegura que la columna ocupe toda la altura disponible */
 }
 
-/* Estilos responsivos para pantallas grandes */
-@media (min-width: 768px) {
-    .row {
-        flex-direction: row; /* Las columnas se colocarán una al lado de la otra en pantallas grandes */
-    }
+/* Asegurar que ambas columnas tengan el mismo tamaño */
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
 
-    .column {
-        flex: 1 1 48%; /* Las columnas ocuparán el 50% del ancho en pantallas grandes */
-    }
+/* Asegurar que los botones estén dentro de la columna */
+.button-container {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
 
+/* Estilos responsivos para las columnas */
 
-/* Estilos para pantallas de tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (max-width: 768px) {
     .row {
-      flex-direction: column; /* Las columnas se colocarán una debajo de la otra */
+        flex-direction: column; /* Las columnas se colocarán una debajo de la otra en pantallas pequeñas */
     }
-    .column {
-      flex: 1 1 auto; /* Las columnas ocuparán el espacio disponible */
-      height: auto; /* La altura de las columnas se ajustará automáticamente*/
-    }
-  }
 
+    .column {
+        flex: 1 1 100%; /* Las columnas ocuparán el 100% del ancho en pantallas pequeñas */
+    }
+}
+/* Estilos responsivos para las columnas */
+@media (min-width: 768px) {
+    .row {
+        flex-direction: row; /* Las columnas se colocarán una al lado de la otra en pantallas grandes */
+        justify-content: space-between;
+    }
+
+    .column {
+        flex: 1 1 50%; /* Las columnas ocuparán el 50% del ancho en pantallas grandes */
+    }
+}
