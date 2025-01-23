@@ -9,14 +9,15 @@
 /* Estilos para las columnas */
 .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-grow: 1;
     gap: 1rem;
     margin: 1rem 0;
 }
 
 .column {
     display: flex; /* Las columnas ocuparán el 100% en pantallas pequeñas */
-    flex-wrap: wrap;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
     padding: 1rem;
     border: none;
     background-color: transparent;
@@ -30,6 +31,7 @@ textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
     resize: none;
+    flex-grow: 1;
 }
 
 /* Configuración básica */
@@ -41,6 +43,8 @@ html, body {
     font-family: 'Arial', sans-serif;
     color: var(--color-text);
     background-color: var(--color-background);
+    display: flex;
+    flex-direction: column
 }
 
 body {
