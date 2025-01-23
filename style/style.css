@@ -6,73 +6,17 @@
     --color-text: #0bf9f9;
 }
 
-/* Reset de márgenes y padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Diseño básico para el body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Estilos para el header */
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-.logo-text {
-    margin-left: 1rem;
-    font-size: 1.5rem;
-}
-
-/* Estilos para el main */
-main {
-    flex-grow: 1;
-    padding: 1rem;
-}
-
-/* Sección con texto */
-.section {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
 /* Estilos para las columnas */
 .row {
     display: flex;
-    flex-direction: column;
-    height: 100%;
     flex-wrap: wrap;
     gap: 1rem;
     margin: 1rem 0;
 }
 
 .column {
-    flex: 1 1 100%; /* Las columnas ocuparán el 100% en pantallas pequeñas */
+    display: flex; /* Las columnas ocuparán el 100% en pantallas pequeñas */
+    flex-wrap: wrap;
     padding: 1rem;
     border: none;
     background-color: transparent;
@@ -102,6 +46,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+
 }
 
 /* Header */
@@ -163,8 +108,7 @@ main {
 }
 
 .my-custom-row {
-    flex-grow: 1;
-    display: block;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -257,19 +201,6 @@ footer {
     justify-content: center;
 }
 
-
-/* Estilos responsivos para las columnas */
-
-
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column; /* Las columnas se colocarán una debajo de la otra en pantallas pequeñas */
-    }
-
-    .column {
-        flex: 1 1 100%; /* Las columnas ocuparán el 100% del ancho en pantallas pequeñas */
-    }
-}
 /* Estilos responsivos para las columnas */
 @media (min-width: 768px) {
     .row {
@@ -278,6 +209,6 @@ footer {
     }
 
     .column {
-        flex: 1 1 50%; /* Las columnas ocuparán el 50% del ancho en pantallas grandes */
+        flex: 1 1 48%; /* Las columnas ocuparán el 48% del ancho en pantallas grandes */
     }
 }
