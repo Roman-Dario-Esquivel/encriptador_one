@@ -18,8 +18,12 @@
     <link rel="apple-touch-icon" href="./favicon/favicon-120.png" sizes="120x120">
     <link rel="apple-touch-icon" href="./favicon/favicon-152.png" sizes="152x152">
     <link rel="apple-touch-icon" href="./favicon/favicon-180.png" sizes="180x180">
-    <title>Encriptador / Desencriptador</title>
-</head>
+
+    <head>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <title>Encriptador / Desencriptador</title>
+    </head>
 
 <body>
     <header>
@@ -32,7 +36,8 @@
     </header>
     <main>
         <div class="section">
-            <p>Sección completa</p>
+            <button class="custom-button" id="clean"><span class="material-symbols-outlined">vacuum</span> limpiar
+                texto</button>
         </div>
         <div class="row">
             <div class="column col-borde1">
@@ -40,15 +45,16 @@
                 <textarea class="custom-textarea" id="inputText" rows="5"
                     placeholder="Escribe aquí tu texto..."></textarea>
                 <div class="button-container">
-                    <button class="custom-button">Botón 1</button>
-                    <button class="custom-button">Botón 2</button>
+                    <button class="custom-button">encriptar</button>
+                    <button class="custom-button">desencriptar</button>
                 </div>
             </div>
             <div class="column col-borde2 background_image">
                 <label for="resultText">Resultado:</label>
-                <textarea class="custom-textarea" id="resultText" rows="5" readonly
+                <textarea class="custom-textarea" readonly id="resultText" rows="5"
                     placeholder="Aquí aparecerá el resultado..."></textarea>
-            </div>
+                    <button class="custom-button" id="reparar"><span class="material-symbols-outlined">content_copy</span> copiar </button>
+                </div>
         </div>
         </div>
     </main>
