@@ -153,12 +153,23 @@ footer {
 
 /* Imagen de fondo para la segunda columna */
 .background_image {
-    background-image: url('/home/roman/Documentos/encriptador_one/romanencriptdor/images/fondo.jpeg');
+    background-image: url('images/fondo.jpeg');
     /* Aquí puedes poner la URL de tu imagen */
     background-size: cover;
     background-position: center;
     height: 100%;
     /* Asegura que la columna ocupe toda la altura disponible */
+}
+
+.background_image.hidden {
+    background-image: none;
+}
+
+/* Estilos para el contenido */
+.background_image label,
+.background_image textarea,
+.background_image button {
+    z-index: 2;
 }
 
 /* Asegurar que los botones estén dentro de la columna */
@@ -170,7 +181,7 @@ footer {
 }
 
 #resultText {
-    color: var(--color-SecOpac);
+    color: #d1fe10;
 }
 
 .custom-button {
